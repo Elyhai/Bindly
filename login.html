@@ -1,1 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="icon" type="images/png" href="favicon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="login-container"> <!-- left side should be the login form and the right side should be a video container or panel (vertically centered both). Use flexbox for this. --> 
+        <span class="icon-text"> <!--This is where the Bindly icon and text goes. -->
+                <i class="bindly-icon" aria-hidden="true"></i> <!--This is where the Bindly icon goes-->
+                <span>Bindly</span> <!-- ED Garamond font. This is where the Bindly text goes. -->
+        </span>
+            <h2>A notebook that lives in your browser</h2> <!-- ED Garamond font -->
+        <form action="index.html" method="post">
+            <p class="sub">Please enter your credentials.</p> <!-- Open sans font and css: .login-container p.sub -->
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required autocomplete="username">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required minlength="4" autocomplete="current-password">
+            <button class="btn" type="submit">Login</button> <!-- css: .login-container .btn -->
+        </form>
+    </div>
+    <div class="visual-panel"> <!-- this video container or panel should be portrait and should be on the right side of the login form. -->
+        <video autoplay muted loop>
+            <source src="background.mp4" type="videos/mp4"> 
+        </video>
+    </div>
+    <footer>
+        <p>&copy; 2026 Bindly. All rights reserved by Calilan and Rincoraya.</p>
+    </footer>
+    <script>
 
+    </script>
+</body>
+</html>
