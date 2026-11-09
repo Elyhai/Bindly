@@ -32,8 +32,8 @@ website/
 Follow these guidelines to maintain a consistent website across all pages.
 
 ### Typography
-- **Playfair Display:** General website typography, headings, and primary text.
-- **Open Sans:** Text inside UI elements, including buttons, inputs, navigation, and forms.
+- **EB Garamond:** General website typography, headings, and primary text. https://fonts.google.com/specimen/EB+Garamond
+- **Open Sans:** Text inside UI elements, including buttons, inputs, navigation, and forms. https://fonts.google.com/specimen/Open+Sans
 - Maintain consistent font sizes and font weights.
 
 ### Border Radius
