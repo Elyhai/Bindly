@@ -4,11 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bindly</title>
-    <link rel="icon" type="images/png" href="favicon.png">
+    <link rel="icon" type="images/png" href="favicon.png"> <!-- Yung bindly icon galing sa canva. Same goes sa ibang html files -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div class="app">
+        <aside class="side-bar"> <!-- Use grid here, siguro mga 300px para sa aside. The rest is doable na -->
+            <div class="app-brand"> <!-- Copy and paste mo nlng yung css .icon-text properties here tas change mo yung size. -->
+                <img src="" alt="Bindly Icon" class="logo"> 
+                Bindly
+            </div>
+            <h3>Workspace</h3> <!-- This is where the Workspace heading goes. Make it transparent and same font size as the notes. Open Sans -->
+            <div class="binder-list"> <!-- This is where the list of notebooks goes. Use flexbox for this. -->
+                <label for="n0">Class Notes</label> 
+                <label for="n1">Project Ideas</label>
+                <label for="n2">Daily Journal</label>
+            </div>
+            <h3>Links</h3> <!-- This is where the about us, contact us, and login page links go -->
+            <div class="misc-links"> <!-- instead of yung underline na laging kita or nakikita pag hovered, make it the same as the notebook yng may hovered box -->
+                <a href="about.html">About us</a>
+                <a href="contact.html">Contact us</a>
+                <a href="login.html">Log out</a>
+            </div>
+            <div class="user"> <!-- This is where the user info displays. Use flexbox for this. -->
+                <div class="avatar" id="av"></div><span class="name" id="uname"></span> <!-- dito yung avatar tas yung username na iniput ng user -->
+            </div>
+        </aside>
+        <main> <!-- change bg color behind ng notebook. Ikaw na bahala na sa size ng textarea/notebook -->
+            <textarea class="note" id="t0" spellcheck="false">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</textarea>
+            <textarea class="note" id="t1" spellcheck="false">Pano yung FoP Project natin guys? Haha idk, I forgot what sir said. Insert here na random to do list: 1. 1+1= 2. what is room TBA? 3. what doesI feel so criminology rn means?</textarea>
+            <textarea class="note" id="t2" spellcheck="false">Dear Diary, today is the presentation of our final project in ItC. Basta yon miss ko na sya.</textarea>
+            <div class="bgset"> <!-- basta yung same sa canva wireframe, gawin mong round yung bgset. -->
+                <label for="b1">🎨</label> <!-- Ito yung horizontal lines -->
+                <label for="b2">🎨</label> <!-- Ito naman yung mga grids -->
+                <label for="b3">🎨</label> <!-- Ito yung mga dots -->
+                <label for="b4">🎨</label> <!-- Ito yung blank lng -->
+                <label for="b0">🎨</label> <!-- Ito yung black bg -->
+        </main>
+    </div>
+    <script>
+
+    </script>
 </body>
 </html>
 

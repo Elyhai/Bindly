@@ -11,11 +11,11 @@
     <div class="flex-container"> <!-- left side should be the login form and the right side should be a video container or panel (vertically centered both). Use flexbox for this. -->
         <div class="login-container">
             <span class="icon-text"> <!--This is where the Bindly icon and text goes. -->
-                    <i class="bindly-icon" aria-hidden="true"></i> <!--This is where the Bindly icon goes-->
+                    <i class="bindly-icon" aria-hidden="true"></i> <!--This is where the Bindly icon goes. Kung img nmn yung icon, gawin mo tong img tag -->
                     <span>Bindly</span> <!-- ED Garamond font. This is where the Bindly text goes. -->
             </span>
                 <h2>A notebook that lives in your browser</h2> <!-- ED Garamond font -->
-            <form action="index.html" method="post">
+            <form class="login-form" action="index.html" method="post">
                 <p class="sub">Please enter your credentials.</p> <!-- Open sans font and css: .login-container p.sub -->
                 <label for="username">Username</label>
                 <input type="text" id="username" name="username" required autocomplete="username">

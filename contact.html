@@ -8,7 +8,32 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <header> <!-- di na yung aside, ito yung nasa taas. kaw bahala na dito-->
+        <div class="app-brand">
+            <img src="favicon.png" alt="Bindly Icon" class="logo">
+            Bindly
+        </div>
+        <a href="index.html" class="back-link">Back to Home</a>
+        <a href="about.html" class="about-link">About us</a>
+        <a href="login.html" class="logout-link">Log out</a>
+    </header>
+    <main>
+        <h1>Contact Us</h1> <!-- ED Garamond font -->
+        <p>If you have any questions, suggestions, or feedback, feel free to reach out to us using the form below:</p> <!-- ED Garamond font -->
+        <form class="contact-form" action="form-done.html" method="post"> <!-- directs to form-done.html na mostly empty yung website tas may nakalagay form submitted kinemerut with go back button-->
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <p>Or you can reach us directly at <a href="mailto:info123@bindly.com">info123@bindly.com</a>. Phone: (123) 456-7890. </p> <!-- paayos nalang here. ED Garamond font -->
+    </main>
+    <footer>
+        <p>&copy; 2026 Bindly. All rights reserved by Calilan and Rincoraya.</p>
+    </footer>
 </body>
 </html>
 
