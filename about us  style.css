@@ -1,0 +1,154 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    background-color: #f86e53;
+    font-family: 'EB Garamond', serif;
+    color: black;
+}
+
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 24px;
+    background-color: #f0e9dc;
+}
+
+/* Logo & Name */
+.app-brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-right: auto;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+/* Logo */
+.logo {
+    width: 40px;
+    height: 40px;
+}
+
+/* Navigation Link inside Header */
+header a {
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: black;
+    text-decoration: none;
+}
+
+/* Hover Effect */
+header a:hover {
+    background-color: #f9c4b6;
+}
+
+/* Main */
+main {
+    margin: 16px;
+    padding: 32px 24px;
+    background-color: #fde8d0;
+    border-radius: 18px;
+}
+
+.about-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Main Heading */
+.about-content h1 {
+    margin: 0 0 4px;
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+}
+
+/* Tagline */
+.about-content h1 + p {
+    margin: 0 0 28px;
+    font-size: 20px;
+    font-style: italic;
+    text-align: center;
+}
+
+.about-content h2 {
+    margin: 28px 0 8px;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.about-content p,
+.about-content li {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.about-content p {
+    margin: 0 0 8px;
+}
+
+.about-content ul {
+    margin: 0;
+    padding-left: 24px;
+}
+
+/* Team Members Section */
+.team-members {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 16px;
+}
+
+.team-member {
+    flex: 1;
+    max-width: 300px;
+    padding: 24px 16px;
+    background-color: #f0e9dc;
+    border: 1px solid #eed9b3;
+    border-radius: 14px;
+    text-align: center;
+}
+
+.avatar {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: #f86e53;
+}
+
+.team-member h3 {
+    margin: 12px 0 2px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.team-member p {
+    margin: 0 0 6px;
+    font-size: 16px;
+}
+
+
+.team-member h3 + p {
+    font-weight: 600;
+    color: #f86e53;
+}
+
+/* Footer */
+footer {
+    padding: 4px 16px 16px;
+    text-align: center;
+    font-size: 13px;
+    color: white;
+}
