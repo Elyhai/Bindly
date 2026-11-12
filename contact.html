@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
-    <link rel="icon" type="images/png" href="favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="icon" type="images/png" href="assets/icons/bindly-icon.ico">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="contact-page">
     <header> <!-- di na yung aside, ito yung nasa taas. kaw bahala na dito-->
         <div class="app-brand">
-            <img src="favicon.png" alt="Bindly Icon" class="logo">
+            <img src="assets/icons/bindly-icon.png" alt="Bindly Icon" class="logo">
             Bindly
         </div>
         <a href="index.html" class="back-link">Back to Home</a>
@@ -20,7 +22,7 @@
     <main>
         <h1>Contact Us</h1> <!-- ED Garamond font -->
         <p>If you have any questions, suggestions, or feedback, feel free to reach out to us using the form below:</p> <!-- ED Garamond font -->
-        <form class="contact-form" action="form-done.html" method="post"> <!-- directs to form-done.html na mostly empty yung website tas may nakalagay form submitted kinemerut with go back button-->
+        <form class="contact-form" action="form-done.html" onsubmit="localStorage.bindly_user=username.value; location='index.html'; return false"> <!-- directs to form-done.html na mostly empty yung website tas may nakalagay form submitted kinemerut with go back button-->
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
             <label for="email">Email:</label>

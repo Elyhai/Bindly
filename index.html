@@ -4,21 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bindly</title>
-    <link rel="icon" type="images/png" href="favicon.png"> <!-- Yung bindly icon galing sa canva. Same goes sa ibang html files -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="icon" type="images/png" href="assets/icons/bindly-icon.ico"> <!-- Yung bindly icon galing sa canva. Same goes sa ibang html files -->
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="index-page">
     <div class="app">
+
+        <input type="radio" name="nb" id="n0" checked>
+        <input type="radio" name="nb" id="n1">
+        <input type="radio" name="nb" id="n2">
+        <input type="radio" name="bg" id="b0" checked>
+        <input type="radio" name="bg" id="b1">
+        <input type="radio" name="bg" id="b2">
+        <input type="radio" name="bg" id="b3">
+        <input type="radio" name="bg" id="b4">
+        
         <aside class="side-bar"> <!-- Use grid here, siguro mga 300px para sa aside. The rest is doable na -->
             <div class="app-brand"> <!-- Copy and paste mo nlng yung css .icon-text properties here tas change mo yung size. -->
-                <img src="" alt="Bindly Icon" class="logo"> 
+                <img src="assets/icons/bindly-icon.png" alt="Bindly Icon" class="logo"> 
                 Bindly
             </div>
             <h3>Workspace</h3> <!-- This is where the Workspace heading goes. Make it transparent and same font size as the notes. Open Sans -->
             <div class="binder-list"> <!-- This is where the list of notebooks goes. Use flexbox for this. -->
-                <label for="n0">Class Notes</label> 
-                <label for="n1">Project Ideas</label>
-                <label for="n2">Daily Journal</label>
+                <label for="n0">📝Class Notes</label> 
+                <label for="n1">📚Project Ideas</label>
+                <label for="n2">📒Daily Journal</label>
             </div>
             <h3>Links</h3> <!-- This is where the about us, contact us, and login page links go -->
             <div class="misc-links"> <!-- instead of yung underline na laging kita or nakikita pag hovered, make it the same as the notebook yng may hovered box -->
@@ -27,23 +39,35 @@
                 <a href="login.html">Log out</a>
             </div>
             <div class="user"> <!-- This is where the user info displays. Use flexbox for this. -->
-                <div class="avatar" id="av"></div><span class="name" id="uname"></span> <!-- dito yung avatar tas yung username na iniput ng user -->
+                <img class="avatar" id="av" src="assets/images/avatar.png"></img><span class="name" id="uname"></span> <!-- dito yung avatar tas yung username na iniput ng user -->
             </div>
         </aside>
         <main> <!-- change bg color behind ng notebook. Ikaw na bahala na sa size ng textarea/notebook -->
-            <textarea class="note" id="t0" spellcheck="false">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</textarea>
-            <textarea class="note" id="t1" spellcheck="false">Pano yung FoP Project natin guys? Haha idk, I forgot what sir said. Insert here na random to do list: 1. 1+1= 2. what is room TBA? 3. what doesI feel so criminology rn means?</textarea>
-            <textarea class="note" id="t2" spellcheck="false">Dear Diary, today is the presentation of our final project in ItC. Basta yon miss ko na sya.</textarea>
-            <div class="bgset"> <!-- basta yung same sa canva wireframe, gawin mong round yung bgset. -->
-                <label for="b1">🎨</label> <!-- Ito yung horizontal lines -->
-                <label for="b2">🎨</label> <!-- Ito naman yung mga grids -->
-                <label for="b3">🎨</label> <!-- Ito yung mga dots -->
-                <label for="b4">🎨</label> <!-- Ito yung blank lng -->
-                <label for="b0">🎨</label> <!-- Ito yung black bg -->
+            <div class="sheet">
+                <textarea class="note" id="t0" spellcheck="false">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</textarea>
+                <textarea class="note" id="t1" spellcheck="false">Pano yung FoP Project natin guys? Haha idk, I forgot what sir said. Insert here na random to do list: 1. 1+1= 2. what is room TBA? 3. what does I feel so criminology rn means?</textarea>
+                <textarea class="note" id="t2" spellcheck="false">Dear Diary, today is the presentation of our final project in ItC. Basta yon miss ko na sya. Would you like me to humanize this text so it sounds more natural and less AI-generated? Humanize it pls. </textarea>
+            </div>
+            <div class="bgset">
+                <label for="b1" title="Change paper style">🎨</label> <!-- shown on lines, switches to grids -->
+                <label for="b2" title="Change paper style">🎨</label> <!-- shown on grids, switches to dots -->
+                <label for="b3" title="Change paper style">🎨</label> <!-- shown on dots, switches to blank -->
+                <label for="b4" title="Change paper style">🎨</label> <!-- shown on blank, switches to black -->
+                <label for="b0" title="Change paper style">🎨</label> <!-- shown on black, switches back to lines -->
+            </div>
         </main>
     </div>
     <script>
-
+        const user = localStorage.bindly_user;
+        if (!user) location = 'login.html';
+        else {
+            uname.textContent = user;
+            document.querySelectorAll('.note').forEach(t => {
+            const key = user + '_' + t.id;
+            if (localStorage[key] !== undefined) t.value = localStorage[key];  // load saved text
+            t.oninput = () => localStorage[key] = t.value;                     // save on every keystroke
+            });
+        }
     </script>
 </body>
 </html>
